@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>인생안전점검 체크리스트</title>
+<style>
+body{font-family:Arial,sans-serif;max-width:900px;margin:auto;padding:15px;background:#f5f5f5}
+.card{background:white;padding:15px;border-radius:12px;margin-bottom:12px}
+.q{padding:10px 0;border-bottom:1px solid #eee}
+.txt{margin-bottom:8px;line-height:1.5}
+.btn{padding:8px 16px;margin-right:8px;border-radius:8px;border:1px solid #ccc;background:white}
+.yes.active{background:#4CAF50;color:white}
+.no.active{background:#f44336;color:white}
+.main{width:100%;padding:15px;font-size:18px;border-radius:8px}
+</style>
+</head>
+<body>
+
+<div class="card">
+<h2>🌱 인생안전점검 체크리스트</h2>
+<p>현재 나의 미래 준비 상태를 간단하게 점검해 보세요.</p>
+<p><b>총 22문항</b></p>
+
+    <div class='q'>
+      <div class='txt'>1. 노후 준비를 시작했다.</div>
+      <button class='btn yes' id='y0' onclick='setAns(0,true)'>예</button>
+      <button class='btn no' id='n0' onclick='setAns(0,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>2. 매달 일정 금액을 저축하거나 투자하고 있다.</div>
+      <button class='btn yes' id='y1' onclick='setAns(1,true)'>예</button>
+      <button class='btn no' id='n1' onclick='setAns(1,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>3. 앞으로 10년 재무 목표가 있다.</div>
+      <button class='btn yes' id='y2' onclick='setAns(2,true)'>예</button>
+      <button class='btn no' id='n2' onclick='setAns(2,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>4. 은퇴 후 생활비를 어느 정도 예상하고 있다.</div>
+      <button class='btn yes' id='y3' onclick='setAns(3,true)'>예</button>
+      <button class='btn no' id='n3' onclick='setAns(3,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>5. 비상금이 3개월 생활비 이상 준비되어 있다.</div>
+      <button class='btn yes' id='y4' onclick='setAns(4,true)'>예</button>
+      <button class='btn no' id='n4' onclick='setAns(4,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>6. 예상치 못한 큰 지출에 대비한 계획이 있다.</div>
+      <button class='btn yes' id='y5' onclick='setAns(5,true)'>예</button>
+      <button class='btn no' id='n5' onclick='setAns(5,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>7. 갑작스러운 실직에 대비한 계획이 있다.</div>
+      <button class='btn yes' id='y6' onclick='setAns(6,true)'>예</button>
+      <button class='btn no' id='n6' onclick='setAns(6,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>8. 대출 상환 계획이 명확하다.</div>
+      <button class='btn yes' id='y7' onclick='setAns(7,true)'>예</button>
+      <button class='btn no' id='n7' onclick='setAns(7,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>9. 부양가족의 생활비 계획이 있다.</div>
+      <button class='btn yes' id='y8' onclick='setAns(8,true)'>예</button>
+      <button class='btn no' id='n8' onclick='setAns(8,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>10. 병원비가 발생해도 당장 부담되지 않는다.</div>
+      <button class='btn yes' id='y9' onclick='setAns(9,true)'>예</button>
+      <button class='btn no' id='n9' onclick='setAns(9,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>11. 갑작스러운 질병이나 사고 시 의료비 마련이 되어 있다.</div>
+      <button class='btn yes' id='y10' onclick='setAns(10,true)'>예</button>
+      <button class='btn no' id='n10' onclick='setAns(10,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>12. 가족이 아파도 생활이 크게 흔들리지 않는다.</div>
+      <button class='btn yes' id='y11' onclick='setAns(11,true)'>예</button>
+      <button class='btn no' id='n11' onclick='setAns(11,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>13. 암 진단 시 치료비 준비가 어느 정도 되어 있다.</div>
+      <button class='btn yes' id='y12' onclick='setAns(12,true)'>예</button>
+      <button class='btn no' id='n12' onclick='setAns(12,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>14. 현재 가입한 보험 내용을 대체로 알고 있다.</div>
+      <button class='btn yes' id='y13' onclick='setAns(13,true)'>예</button>
+      <button class='btn no' id='n13' onclick='setAns(13,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>15. 내가 매달 납입하는 보험료를 알고 있다.</div>
+      <button class='btn yes' id='y14' onclick='setAns(14,true)'>예</button>
+      <button class='btn no' id='n14' onclick='setAns(14,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>16. 암·뇌혈관·심장질환 보장 현황을 알고 있다.</div>
+      <button class='btn yes' id='y15' onclick='setAns(15,true)'>예</button>
+      <button class='btn no' id='n15' onclick='setAns(15,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>17. 실손보험이 있다.</div>
+      <button class='btn yes' id='y16' onclick='setAns(16,true)'>예</button>
+      <button class='btn no' id='n16' onclick='setAns(16,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>18. 최근 3년 안에 보험 점검을 받은 적이 있다.</div>
+      <button class='btn yes' id='y17' onclick='setAns(17,true)'>예</button>
+      <button class='btn no' id='n17' onclick='setAns(17,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>19. 가입한 보험이 최신 의료기술(신의료기술)을 보장하는지 확인해 본 적이 있다.</div>
+      <button class='btn yes' id='y18' onclick='setAns(18,true)'>예</button>
+      <button class='btn no' id='n18' onclick='setAns(18,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>20. 10년 이상 된 보험이라도 주기적으로 내용을 확인한다.</div>
+      <button class='btn yes' id='y19' onclick='setAns(19,true)'>예</button>
+      <button class='btn no' id='n19' onclick='setAns(19,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>21. 보험은 오래됐다고 무조건 좋은 것은 아니라는 점을 알고 있다.</div>
+      <button class='btn yes' id='y20' onclick='setAns(20,true)'>예</button>
+      <button class='btn no' id='n20' onclick='setAns(20,false)'>아니오</button>
+    </div>
+    
+    <div class='q'>
+      <div class='txt'>22. 현재 보장 내용이 내 연령에 맞는 보장인지 확인해 본 적이 있다.</div>
+      <button class='btn yes' id='y21' onclick='setAns(21,true)'>예</button>
+      <button class='btn no' id='n21' onclick='setAns(21,false)'>아니오</button>
+    </div>
+    
+<button class="main" onclick="showResult()">결과 보기</button>
+</div>
+
+<div class="card" id="result">
+진단 전입니다.
+</div>
+
+<script>
+const answers=new Array(22).fill(null);
+
+function setAns(i,val){
+ answers[i]=val;
+ document.getElementById('y'+i).classList.remove('active');
+ document.getElementById('n'+i).classList.remove('active');
+ document.getElementById((val?'y':'n')+i).classList.add('active');
+}
+
+function showResult(){
+ let score=answers.filter(v=>v===true).length;
+
+ let grade='🔴 점검 필요';
+ let msg='미래 준비와 보험 점검을 권장합니다.';
+
+ if(score>=11){
+   grade='🟡 보통';
+   msg='기본적인 준비는 되어 있으나 일부 점검이 필요합니다.';
+ }
+
+ if(score>=17){
+   grade='🟢 양호';
+   msg='미래 준비와 위험 대비 상태가 비교적 양호합니다.';
+ }
+
+ document.getElementById('result').innerHTML=`
+ <h2>${grade}</h2>
+ <p><b>점수 :</b> ${score} / 22</p>
+ <p>${msg}</p>
+ <hr>
+ <b>확인해 볼 부분</b><br>
+ • 노후 준비 상태<br>
+ • 비상자금 확보 여부<br>
+ • 의료비 대비 상태<br>
+ • 보험 점검 주기<br>
+ • 신의료기술 보장 여부
+ `;
+}
+</script>
+
+</body>
+</html>
